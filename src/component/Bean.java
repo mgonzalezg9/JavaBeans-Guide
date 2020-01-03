@@ -46,7 +46,7 @@ public class Bean implements Serializable {
 		if (newValue != oldValue) {
 			this.value = newValue;
 
-			// Notifies the event of change to all subscribers
+			// Notifies the change event to all subscribers
 			EventBeanValue ev = new EventBeanValue(this, oldValue, newValue);
 			notifyChange(ev);
 		}
